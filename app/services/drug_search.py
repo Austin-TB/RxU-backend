@@ -18,24 +18,18 @@ class DrugSearchService:
         Load drug data from a CSV file into a pandas DataFrame.
         It renames columns for easier access and handles missing values.
         """
-        # Define the path to the CSV file.
-        # Note: Using __file__ assumes this script is run as a file.
-        # This path might need adjustment based on your project structure.
         try:
             csv_path = os.path.join(os.path.dirname(__file__), "../../../data/drugs_sample.csv")
         except NameError:
-            # Fallback for interactive environments where __file__ is not defined
-            csv_path = "drugs_sample.csv" # Assuming the file is in the current directory
+            csv_path = "drugs_sample.csv" 
 
         if not os.path.exists(csv_path):
             print(f"Warning: Drug data file not found at {csv_path}")
             return
 
         try:
-            # Read the CSV data using pandas
             self.df = pd.read_csv(csv_path)
 
-            # Rename columns to be more Python-friendly (snake_case)
             self.df.rename(columns={
                 'DrugBank ID': 'drugbank_id',
                 'Common name': 'name',
@@ -45,14 +39,12 @@ class DrugSearchService:
                 'Description': 'description'
             }, inplace=True)
 
-            # Fill any missing (NaN) synonym values with an empty string
             self.df['synonyms'] = self.df['synonyms'].fillna('')
 
             print(f"Loaded {len(self.df)} drugs from the dataset into a DataFrame.")
 
         except Exception as e:
             print(f"Error loading drug data: {e}")
-            # Ensure the dataframe is empty on failure
             self.df = pd.DataFrame()
 
     def search_drugs(self, query: str, limit: int = 10) -> List[Dict]:
@@ -69,23 +61,17 @@ class DrugSearchService:
         """
         if not query or not query.strip() or self.df.empty:
             return []
-
-        # Sanitize the query string
         query = query.strip().lower()
 
         # Create boolean masks for each column to search.
-        # `na=False` ensures that any remaining NaN values are treated as non-matches.
         name_mask = self.df['name'].str.lower().str.contains(query, na=False)
         generic_mask = self.df['generic_name'].str.lower().str.contains(query, na=False)
         synonyms_mask = self.df['synonyms'].str.lower().str.contains(query, na=False)
 
-        # Combine the masks using a logical OR to find rows that match in any of the columns.
         combined_mask = name_mask | generic_mask | synonyms_mask
 
-        # Apply the combined mask to the DataFrame to get the results.
         results_df = self.df[combined_mask]
 
-        # Limit the results and convert the resulting DataFrame to a list of dictionaries.
         return results_df.head(limit).to_dict('records')
 
     def get_drug_by_id(self, drugbank_id: str) -> Optional[Dict]:
