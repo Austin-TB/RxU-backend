@@ -1,0 +1,101 @@
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
+from typing import List, Optional
+import uvicorn
+
+# Import route modules (will be created later)
+# from app.api import drugs
+
+app = FastAPI(
+    title="Drug Sentiment & Recommendation Dashboard API",
+    description="API for drug sentiment analysis, recommendations, and metadata",
+    version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Health check endpoint
+@app.get("/")
+async def root():
+    return {"message": "Drug Sentiment & Recommendation Dashboard API", "status": "running"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
+
+# API endpoints
+@app.get("/api/drugs/search")
+async def search_drugs(q: str = Query(..., description="Drug name to search for")):
+    """Search drugs and fetch metadata"""
+    # TODO: Implement drug search logic
+    return {
+        "query": q,
+        "results": [
+            {
+                "name": q,
+                "generic_name": f"Generic {q}",
+                "brand_names": [f"Brand {q}"],
+                "drug_class": "Example Class",
+                "description": f"Information about {q}"
+            }
+        ]
+    }
+
+@app.get("/api/drugs/sentiment")
+async def get_drug_sentiment(drug_name: str = Query(..., description="Drug name for sentiment analysis")):
+    """Retrieve sentiment trend data"""
+    # TODO: Implement sentiment analysis logic
+    return {
+        "drug_name": drug_name,
+        "sentiment_data": [
+            {"date": "2025-01-01", "positive": 0.6, "neutral": 0.3, "negative": 0.1},
+            {"date": "2025-01-02", "positive": 0.7, "neutral": 0.2, "negative": 0.1},
+            {"date": "2025-01-03", "positive": 0.5, "neutral": 0.4, "negative": 0.1}
+        ],
+        "overall_sentiment": "positive",
+        "sentiment_score": 0.6
+    }
+
+@app.get("/api/drugs/recommend")
+async def recommend_drugs(drug_name: str = Query(..., description="Drug name to find alternatives for")):
+    """Get recommended similar drugs"""
+    # TODO: Implement drug recommendation logic
+    return {
+        "original_drug": drug_name,
+        "recommendations": [
+            {
+                "name": f"Alternative 1 to {drug_name}",
+                "similarity_score": 0.85,
+                "reason": "Similar therapeutic effect with fewer side effects"
+            },
+            {
+                "name": f"Alternative 2 to {drug_name}",
+                "similarity_score": 0.78,
+                "reason": "Same drug class with different mechanism"
+            }
+        ]
+    }
+
+@app.get("/api/drugs/side-effects")
+async def get_side_effects(drug_name: str = Query(..., description="Drug name to get side effects for")):
+    """Get side effect information"""
+    # TODO: Implement side effects retrieval logic
+    return {
+        "drug_name": drug_name,
+        "common_side_effects": [
+            {"effect": "Nausea", "frequency": "common", "severity": "mild"},
+            {"effect": "Headache", "frequency": "common", "severity": "mild"},
+            {"effect": "Dizziness", "frequency": "uncommon", "severity": "moderate"}
+        ],
+        "serious_side_effects": [
+            {"effect": "Liver damage", "frequency": "rare", "severity": "severe"}
+        ]
+    }
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True) 
