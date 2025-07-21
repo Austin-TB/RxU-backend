@@ -3,12 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
 import uvicorn
 
-# Import route modules (will be created later)
-# from app.api import drugs
+# Import the drug search service
+from app.services.drug_search import drug_search_service
 
 app = FastAPI(
-    title="Drug Sentiment & Recommendation Dashboard API",
-    description="API for drug sentiment analysis, recommendations, and metadata",
+    title="RxU-backend",
+    description="API for RxU",
     version="1.0.0"
 )
 
@@ -22,7 +22,7 @@ app.add_middleware(
 # Health check endpoint
 @app.get("/")
 async def root():
-    return {"message": "Drug Sentiment & Recommendation Dashboard API", "status": "running"}
+    return {"message": "RxU-backend API", "status": "running"}
 
 @app.get("/health")
 async def health_check():
@@ -32,19 +32,40 @@ async def health_check():
 @app.get("/api/drugs/search")
 async def search_drugs(q: str = Query(..., description="Drug name to search for")):
     """Search drugs and fetch metadata"""
-    # TODO: Implement drug search logic
-    return {
-        "query": q,
-        "results": [
-            {
-                "name": q,
-                "generic_name": f"Generic {q}",
-                "brand_names": [f"Brand {q}"],
-                "drug_class": "Example Class",
-                "description": f"Information about {q}"
+    try:
+        # Use the real drug search service
+        search_results = drug_search_service.search_drugs(q, limit=10)
+        
+        if not search_results:
+            return {
+                "query": q,
+                "results": [],
+                "message": "No drugs found matching your search query"
             }
-        ]
-    }
+        
+        # Format results for API response
+        formatted_results = []
+        for drug in search_results:
+            formatted_drug = {
+                "drugbank_id": drug["drugbank_id"],
+                "name": drug["name"],
+                "generic_name": drug["generic_name"],
+                "brand_names": drug["synonyms"],
+                "drug_class": drug["drug_class"],
+                "description": drug["description"],
+                "match_score": drug.get("match_score", 100),
+                "match_type": drug.get("match_type", "exact")
+            }
+            formatted_results.append(formatted_drug)
+        
+        return {
+            "query": q,
+            "results": formatted_results,
+            "total_found": len(formatted_results)
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Search error: {str(e)}")
 
 @app.get("/api/drugs/sentiment")
 async def get_drug_sentiment(drug_name: str = Query(..., description="Drug name for sentiment analysis")):
@@ -98,4 +119,4 @@ async def get_side_effects(drug_name: str = Query(..., description="Drug name to
     }
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True) 
+    uvicorn.run(app, host="0.0.0.0", port=8000) 

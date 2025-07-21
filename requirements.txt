@@ -1,7 +1,7 @@
-fastapi
-uvicorn[standard]
+fastapi==0.104.1
+uvicorn==0.24.0
 pydantic
-python-multipart
+python-multipart==0.0.6
 pydantic_settings
 requests
 python-dotenv
@@ -26,3 +26,5 @@ scikit-learn
 pytest
 pytest-asyncio
 httpx
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.21.1
