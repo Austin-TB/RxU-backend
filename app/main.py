@@ -3,8 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
 import uvicorn
 
-# Import the drug search service
 from app.services.drug_search import drug_search_service
+from app.services.sentiment_analysis import sentiment_service
 
 app = FastAPI(
     title="RxU-backend",
@@ -19,7 +19,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Health check endpoint
 @app.get("/")
 async def root():
     return {"message": "RxU-backend API", "status": "running"}
@@ -33,7 +32,6 @@ async def health_check():
 async def search_drugs(q: str = Query(..., description="Drug name to search for")):
     """Search drugs and fetch metadata"""
     try:
-        # Use the real drug search service
         search_results = drug_search_service.search_drugs(q, limit=10)
         
         if not search_results:
@@ -43,14 +41,21 @@ async def search_drugs(q: str = Query(..., description="Drug name to search for"
                 "message": "No drugs found matching your search query"
             }
         
-        # Format results for API response
         formatted_results = []
         for drug in search_results:
+            # Convert synonyms string to array for brand_names
+            synonyms_str = drug.get("synonyms", "")
+            if synonyms_str and isinstance(synonyms_str, str):
+                # Split on semicolon and clean up each item
+                brand_names = [name.strip() for name in synonyms_str.split(";") if name.strip()]
+            else:
+                brand_names = []
+            
             formatted_drug = {
                 "drugbank_id": drug["drugbank_id"],
                 "name": drug["name"],
                 "generic_name": drug["generic_name"],
-                "brand_names": drug["synonyms"],
+                "brand_names": brand_names,
                 "drug_class": drug["drug_class"],
                 "description": drug["description"],
                 "match_score": drug.get("match_score", 100),
@@ -70,17 +75,11 @@ async def search_drugs(q: str = Query(..., description="Drug name to search for"
 @app.get("/api/drugs/sentiment")
 async def get_drug_sentiment(drug_name: str = Query(..., description="Drug name for sentiment analysis")):
     """Retrieve sentiment trend data"""
-    # TODO: Implement sentiment analysis logic
-    return {
-        "drug_name": drug_name,
-        "sentiment_data": [
-            {"date": "2025-01-01", "positive": 0.6, "neutral": 0.3, "negative": 0.1},
-            {"date": "2025-01-02", "positive": 0.7, "neutral": 0.2, "negative": 0.1},
-            {"date": "2025-01-03", "positive": 0.5, "neutral": 0.4, "negative": 0.1}
-        ],
-        "overall_sentiment": "positive",
-        "sentiment_score": 0.6
-    }
+    try:
+        sentiment_result = sentiment_service.get_drug_sentiment(drug_name)
+        return sentiment_result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Sentiment analysis error: {str(e)}")
 
 @app.get("/api/drugs/recommend")
 async def recommend_drugs(drug_name: str = Query(..., description="Drug name to find alternatives for")):

@@ -19,9 +19,9 @@ class DrugSearchService:
         It renames columns for easier access and handles missing values.
         """
         try:
-            csv_path = os.path.join(os.path.dirname(__file__), "../../../data/drugs_sample.csv")
+            csv_path = os.path.join(os.path.dirname(__file__), "../../data/drugs.csv")
         except NameError:
-            csv_path = "drugs_sample.csv" 
+            csv_path = "data/drugs.csv" 
 
         if not os.path.exists(csv_path):
             print(f"Warning: Drug data file not found at {csv_path}")
