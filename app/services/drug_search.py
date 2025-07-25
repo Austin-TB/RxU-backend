@@ -7,17 +7,10 @@ class DrugSearchService:
     A service to search for drug information, powered by a pandas DataFrame.
     """
     def __init__(self):
-        """
-        Initializes the service by loading the drug data into a pandas DataFrame.
-        """
         self.df: pd.DataFrame = pd.DataFrame()
         self.load_drug_data()
 
     def load_drug_data(self):
-        """
-        Load drug data from a CSV file into a pandas DataFrame.
-        It renames columns for easier access and handles missing values.
-        """
         try:
             csv_path = os.path.join(os.path.dirname(__file__), "../../data/drugs.csv")
         except NameError:
@@ -48,17 +41,7 @@ class DrugSearchService:
             self.df = pd.DataFrame()
 
     def search_drugs(self, query: str, limit: int = 10) -> List[Dict]:
-        """
-        Search for drugs where the query string appears in the name,
-        generic name, or synonyms.
 
-        Args:
-            query (str): The search term.
-            limit (int): The maximum number of results to return.
-
-        Returns:
-            A list of dictionaries, where each dictionary represents a matching drug.
-        """
         if not query or not query.strip() or self.df.empty:
             return []
         query = query.strip().lower()
@@ -75,15 +58,7 @@ class DrugSearchService:
         return results_df.head(limit).to_dict('records')
 
     def get_drug_by_id(self, drugbank_id: str) -> Optional[Dict]:
-        """
-        Get specific drug information by its DrugBank ID.
 
-        Args:
-            drugbank_id (str): The DrugBank ID of the drug.
-
-        Returns:
-            A dictionary containing the drug's information, or None if not found.
-        """
         if self.df.empty:
             return None
 
@@ -97,15 +72,7 @@ class DrugSearchService:
         return None
 
     def get_random_drugs(self, count: int = 5) -> List[Dict]:
-        """
-        Get a specified number of random drugs from the dataset.
 
-        Args:
-            count (int): The number of random drugs to retrieve.
-
-        Returns:
-            A list of dictionaries representing the random drugs.
-        """
         if self.df.empty or len(self.df) < count:
             return self.df.to_dict('records')
 

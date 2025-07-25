@@ -10,20 +10,10 @@ class SentimentAnalysisService:
     """
     
     def __init__(self):
-        """Initialize the sentiment analysis service"""
         self.mock_posts_cache = {}
         print("SentimentAnalysisService initialized")
     
     def preprocess_text(self, text: str) -> str:
-        """
-        Clean and normalize text for sentiment analysis.
-        
-        Args:
-            text (str): Raw text to preprocess
-            
-        Returns:
-            str: Cleaned and normalized text
-        """
         if not text:
             return ""
         
@@ -149,16 +139,16 @@ class SentimentAnalysisService:
         positive_count = sum(1 for word in words if word in positive_words)
         negative_count = sum(1 for word in words if word in negative_words)
         
-        # Calculate scores (simplified approach)
+        # Calculate scores
         total_sentiment_words = positive_count + negative_count
         if total_sentiment_words == 0:
             return {"positive": 0.1, "neutral": 0.8, "negative": 0.1}
         
-        positive_score = positive_count / len(words) * 5  # Amplify for visibility
-        negative_score = negative_count / len(words) * 5
+        positive_score = positive_count / len(words)
+        negative_score = negative_count / len(words)
         neutral_score = max(0, 1 - positive_score - negative_score)
         
-        # Normalize to ensure they sum to 1
+        #Normalize
         total = positive_score + neutral_score + negative_score
         if total > 0:
             return {

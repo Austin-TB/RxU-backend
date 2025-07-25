@@ -1,7 +1,7 @@
-fastapi==0.104.1
-uvicorn==0.24.0
+fastapi
+uvicorn
 pydantic
-python-multipart==0.0.6
+python-multipart
 pydantic_settings
 requests
 python-dotenv
@@ -21,10 +21,3 @@ botocore
 beautifulsoup4
 nltk
 scikit-learn
-
-# Development & Testing
-pytest
-pytest-asyncio
-httpx
-fuzzywuzzy==0.18.0
-python-Levenshtein==0.21.1
