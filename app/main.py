@@ -3,8 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
 import uvicorn
 
-from app.services.drug_search import drug_search_service
-from app.services.sentiment_analysis import sentiment_service
+from services.drug_search import drug_search_service
 
 app = FastAPI(
     title="RxU-backend",
