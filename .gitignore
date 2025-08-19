@@ -1,1 +1,6 @@
 __pycache__/
+app/services/twitter_scraper/twitter_scraper.py
+data/test_scraper.ipynb
+data/cookies.json
+app/services/twitter_scraper/cookies.json
+app/services/twitter_scraper/tweets.json
