@@ -3,7 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
 import uvicorn
 
-from services.drug_search import drug_search_service
+from app.services.drug_search import drug_search_service
+from app.services.fetch_sentiment import fetch_sentiment, get_available_drugs
 
 app = FastAPI(
     title="RxU-backend",
@@ -75,10 +76,29 @@ async def search_drugs(q: str = Query(..., description="Drug name to search for"
 async def get_drug_sentiment(drug_name: str = Query(..., description="Drug name for sentiment analysis")):
     """Retrieve sentiment trend data"""
     try:
-        sentiment_result = sentiment_service.get_drug_sentiment(drug_name)
+        sentiment_result = fetch_sentiment(drug_name)
         return sentiment_result
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Sentiment analysis error: {str(e)}")
+        # Only catch unexpected errors, return empty response for expected cases
+        print(f"Unexpected error in sentiment analysis: {str(e)}")
+        return {
+            "drug_name": drug_name,
+            "sentiment_data": [],
+            "overall_sentiment": "neutral",
+            "sentiment_score": 0.0,
+            "total_posts_analyzed": 0,
+            "analysis_date": None,
+            "data_available": False,
+            "message": f"Error processing sentiment data for '{drug_name}': {str(e)}"
+        }
+
+@app.get("/api/drugs/sentiment/available")
+async def get_available_sentiment_drugs():
+    """Get list of drugs with available sentiment data"""
+    try:
+        return get_available_drugs()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching available drugs: {str(e)}")
 
 @app.get("/api/drugs/recommend")
 async def recommend_drugs(drug_name: str = Query(..., description="Drug name to find alternatives for")):
