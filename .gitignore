@@ -4,3 +4,5 @@ data/test_scraper.ipynb
 data/cookies.json
 app/services/twitter_scraper/cookies.json
 app/services/twitter_scraper/tweets.json
+data/drugss.csv
+data/drugsss.csv

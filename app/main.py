@@ -103,7 +103,9 @@ async def get_available_sentiment_drugs():
 @app.get("/api/drugs/recommend")
 async def recommend_drugs(drug_name: str = Query(..., description="Drug name to find alternatives for")):
     """Get recommended similar drugs"""
-    # TODO: Implement drug recommendation logic
+    
+    
+
     return {
         "original_drug": drug_name,
         "recommendations": [
@@ -137,4 +139,4 @@ async def get_side_effects(drug_name: str = Query(..., description="Drug name to
     }
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+    uvicorn.run(app, host="0.0.0.0", port=8000)
