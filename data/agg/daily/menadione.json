@@ -1,0 +1,158 @@
+{
+  "drug_name": "menadione",
+  "sentiment_data": [
+    {
+      "date": "2024-09-20",
+      "positive": 0.12,
+      "neutral": 0.801,
+      "negative": 0.08,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-24",
+      "positive": 0.173,
+      "neutral": 0.803,
+      "negative": 0.024,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-30",
+      "positive": 0.104,
+      "neutral": 0.874,
+      "negative": 0.023,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-03",
+      "positive": 0.059,
+      "neutral": 0.924,
+      "negative": 0.017,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-07",
+      "positive": 0.19,
+      "neutral": 0.791,
+      "negative": 0.019,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-10",
+      "positive": 0.028,
+      "neutral": 0.537,
+      "negative": 0.435,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-07",
+      "positive": 0.155,
+      "neutral": 0.784,
+      "negative": 0.06,
+      "post_count": 2
+    },
+    {
+      "date": "2025-03-10",
+      "positive": 0.204,
+      "neutral": 0.64,
+      "negative": 0.155,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-14",
+      "positive": 0.067,
+      "neutral": 0.681,
+      "negative": 0.252,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-27",
+      "positive": 0.066,
+      "neutral": 0.68,
+      "negative": 0.254,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-28",
+      "positive": 0.605,
+      "neutral": 0.366,
+      "negative": 0.029,
+      "post_count": 1
+    },
+    {
+      "date": "2025-04-05",
+      "positive": 0.307,
+      "neutral": 0.649,
+      "negative": 0.045,
+      "post_count": 1
+    },
+    {
+      "date": "2025-04-12",
+      "positive": 0.742,
+      "neutral": 0.245,
+      "negative": 0.013,
+      "post_count": 1
+    },
+    {
+      "date": "2025-04-18",
+      "positive": 0.096,
+      "neutral": 0.619,
+      "negative": 0.285,
+      "post_count": 1
+    },
+    {
+      "date": "2025-04-27",
+      "positive": 0.363,
+      "neutral": 0.624,
+      "negative": 0.013,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-10",
+      "positive": 0.024,
+      "neutral": 0.434,
+      "negative": 0.542,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-12",
+      "positive": 0.027,
+      "neutral": 0.554,
+      "negative": 0.419,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-27",
+      "positive": 0.022,
+      "neutral": 0.645,
+      "negative": 0.333,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-01",
+      "positive": 0.26,
+      "neutral": 0.696,
+      "negative": 0.044,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-13",
+      "positive": 0.028,
+      "neutral": 0.579,
+      "negative": 0.393,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-27",
+      "positive": 0.729,
+      "neutral": 0.265,
+      "negative": 0.005,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 0.047,
+  "total_posts_analyzed": 22,
+  "analysis_date": "2025-08-21 17:03:59",
+  "top_keywords": null,
+  "confidence_score": null
+}

@@ -1,0 +1,200 @@
+{
+  "drug_name": "semaglutide",
+  "sentiment_data": [
+    {
+      "date": "2025-07-21",
+      "positive": 0.054,
+      "neutral": 0.221,
+      "negative": 0.724,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-23",
+      "positive": 0.389,
+      "neutral": 0.549,
+      "negative": 0.062,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-24",
+      "positive": 0.258,
+      "neutral": 0.346,
+      "negative": 0.396,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-25",
+      "positive": 0.293,
+      "neutral": 0.485,
+      "negative": 0.222,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-26",
+      "positive": 0.439,
+      "neutral": 0.115,
+      "negative": 0.445,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-27",
+      "positive": 0.677,
+      "neutral": 0.306,
+      "negative": 0.016,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-29",
+      "positive": 0.024,
+      "neutral": 0.273,
+      "negative": 0.704,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-30",
+      "positive": 0.087,
+      "neutral": 0.772,
+      "negative": 0.141,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-31",
+      "positive": 0.27,
+      "neutral": 0.59,
+      "negative": 0.14,
+      "post_count": 4
+    },
+    {
+      "date": "2025-08-01",
+      "positive": 0.046,
+      "neutral": 0.249,
+      "negative": 0.705,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-02",
+      "positive": 0.508,
+      "neutral": 0.312,
+      "negative": 0.18,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-04",
+      "positive": 0.108,
+      "neutral": 0.78,
+      "negative": 0.113,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-05",
+      "positive": 0.183,
+      "neutral": 0.666,
+      "negative": 0.151,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-06",
+      "positive": 0.472,
+      "neutral": 0.288,
+      "negative": 0.24,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-07",
+      "positive": 0.542,
+      "neutral": 0.275,
+      "negative": 0.182,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-08",
+      "positive": 0.165,
+      "neutral": 0.501,
+      "negative": 0.334,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-09",
+      "positive": 0.754,
+      "neutral": 0.212,
+      "negative": 0.034,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-10",
+      "positive": 0.31,
+      "neutral": 0.435,
+      "negative": 0.255,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-12",
+      "positive": 0.05,
+      "neutral": 0.898,
+      "negative": 0.052,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-13",
+      "positive": 0.524,
+      "neutral": 0.31,
+      "negative": 0.166,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-14",
+      "positive": 0.117,
+      "neutral": 0.628,
+      "negative": 0.255,
+      "post_count": 5
+    },
+    {
+      "date": "2025-08-15",
+      "positive": 0.206,
+      "neutral": 0.787,
+      "negative": 0.007,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-17",
+      "positive": 0.796,
+      "neutral": 0.143,
+      "negative": 0.061,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-18",
+      "positive": 0.602,
+      "neutral": 0.374,
+      "negative": 0.024,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-19",
+      "positive": 0.138,
+      "neutral": 0.551,
+      "negative": 0.311,
+      "post_count": 7
+    },
+    {
+      "date": "2025-08-20",
+      "positive": 0.182,
+      "neutral": 0.44,
+      "negative": 0.378,
+      "post_count": 29
+    },
+    {
+      "date": "2025-08-21",
+      "positive": 0.194,
+      "neutral": 0.55,
+      "negative": 0.256,
+      "post_count": 12
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.048,
+  "total_posts_analyzed": 91,
+  "analysis_date": "2025-08-21 17:08:21",
+  "top_keywords": null,
+  "confidence_score": null
+}

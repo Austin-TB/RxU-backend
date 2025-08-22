@@ -1,0 +1,25 @@
+{
+  "drug_name": "enfuvirtide",
+  "sentiment_data": [
+    {
+      "date": "2024-12-17",
+      "positive": 0.051,
+      "neutral": 0.875,
+      "negative": 0.074,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-13",
+      "positive": 0.43,
+      "neutral": 0.55,
+      "negative": 0.021,
+      "post_count": 2
+    }
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 0.265,
+  "total_posts_analyzed": 3,
+  "analysis_date": "2025-08-21 16:50:05",
+  "top_keywords": null,
+  "confidence_score": null
+}

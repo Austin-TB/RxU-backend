@@ -1,0 +1,18 @@
+{
+  "drug_name": "l-aspartic acid",
+  "sentiment_data": [
+    {
+      "date": "2025-04-13",
+      "positive": 0.027,
+      "neutral": 0.322,
+      "negative": 0.651,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.624,
+  "total_posts_analyzed": 1,
+  "analysis_date": "2025-08-21 16:53:03",
+  "top_keywords": null,
+  "confidence_score": null
+}

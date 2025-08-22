@@ -1,0 +1,25 @@
+{
+  "drug_name": "reteplase",
+  "sentiment_data": [
+    {
+      "date": "2024-08-21",
+      "positive": 0.551,
+      "neutral": 0.444,
+      "negative": 0.005,
+      "post_count": 1
+    },
+    {
+      "date": "2024-09-16",
+      "positive": 0.075,
+      "neutral": 0.897,
+      "negative": 0.028,
+      "post_count": 2
+    }
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 0.213,
+  "total_posts_analyzed": 3,
+  "analysis_date": "2025-08-21 16:46:56",
+  "top_keywords": null,
+  "confidence_score": null
+}

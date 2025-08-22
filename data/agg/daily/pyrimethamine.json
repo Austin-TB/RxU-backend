@@ -1,0 +1,116 @@
+{
+  "drug_name": "pyrimethamine",
+  "sentiment_data": [
+    {
+      "date": "2024-09-16",
+      "positive": 0.049,
+      "neutral": 0.724,
+      "negative": 0.227,
+      "post_count": 1
+    },
+    {
+      "date": "2024-09-28",
+      "positive": 0.288,
+      "neutral": 0.69,
+      "negative": 0.022,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-12",
+      "positive": 0.576,
+      "neutral": 0.406,
+      "negative": 0.018,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-15",
+      "positive": 0.046,
+      "neutral": 0.474,
+      "negative": 0.48,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-14",
+      "positive": 0.032,
+      "neutral": 0.434,
+      "negative": 0.534,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-11",
+      "positive": 0.022,
+      "neutral": 0.263,
+      "negative": 0.715,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-03",
+      "positive": 0.031,
+      "neutral": 0.505,
+      "negative": 0.465,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-15",
+      "positive": 0.019,
+      "neutral": 0.496,
+      "negative": 0.485,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-02",
+      "positive": 0.031,
+      "neutral": 0.402,
+      "negative": 0.567,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-08",
+      "positive": 0.017,
+      "neutral": 0.516,
+      "negative": 0.467,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-28",
+      "positive": 0.451,
+      "neutral": 0.513,
+      "negative": 0.036,
+      "post_count": 2
+    },
+    {
+      "date": "2025-05-09",
+      "positive": 0.053,
+      "neutral": 0.819,
+      "negative": 0.128,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-27",
+      "positive": 0.048,
+      "neutral": 0.587,
+      "negative": 0.365,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-07",
+      "positive": 0.04,
+      "neutral": 0.682,
+      "negative": 0.278,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-13",
+      "positive": 0.033,
+      "neutral": 0.499,
+      "negative": 0.468,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.194,
+  "total_posts_analyzed": 16,
+  "analysis_date": "2025-08-21 17:02:50",
+  "top_keywords": null,
+  "confidence_score": null
+}

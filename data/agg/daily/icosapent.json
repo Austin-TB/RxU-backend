@@ -1,0 +1,158 @@
+{
+  "drug_name": "icosapent",
+  "sentiment_data": [
+    {
+      "date": "2024-09-30",
+      "positive": 0.029,
+      "neutral": 0.642,
+      "negative": 0.329,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-18",
+      "positive": 0.007,
+      "neutral": 0.096,
+      "negative": 0.897,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-21",
+      "positive": 0.038,
+      "neutral": 0.63,
+      "negative": 0.332,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-25",
+      "positive": 0.022,
+      "neutral": 0.282,
+      "negative": 0.696,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-26",
+      "positive": 0.836,
+      "neutral": 0.158,
+      "negative": 0.006,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-30",
+      "positive": 0.072,
+      "neutral": 0.87,
+      "negative": 0.058,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-31",
+      "positive": 0.037,
+      "neutral": 0.401,
+      "negative": 0.563,
+      "post_count": 2
+    },
+    {
+      "date": "2024-11-11",
+      "positive": 0.068,
+      "neutral": 0.905,
+      "negative": 0.027,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-22",
+      "positive": 0.047,
+      "neutral": 0.812,
+      "negative": 0.141,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-06",
+      "positive": 0.057,
+      "neutral": 0.802,
+      "negative": 0.141,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-27",
+      "positive": 0.801,
+      "neutral": 0.194,
+      "negative": 0.004,
+      "post_count": 1
+    },
+    {
+      "date": "2025-04-09",
+      "positive": 0.053,
+      "neutral": 0.578,
+      "negative": 0.369,
+      "post_count": 2
+    },
+    {
+      "date": "2025-05-11",
+      "positive": 0.327,
+      "neutral": 0.65,
+      "negative": 0.023,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-11",
+      "positive": 0.089,
+      "neutral": 0.72,
+      "negative": 0.192,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-15",
+      "positive": 0.037,
+      "neutral": 0.6,
+      "negative": 0.362,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-23",
+      "positive": 0.045,
+      "neutral": 0.862,
+      "negative": 0.093,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-24",
+      "positive": 0.122,
+      "neutral": 0.825,
+      "negative": 0.053,
+      "post_count": 2
+    },
+    {
+      "date": "2025-06-28",
+      "positive": 0.077,
+      "neutral": 0.706,
+      "negative": 0.217,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-07",
+      "positive": 0.016,
+      "neutral": 0.51,
+      "negative": 0.474,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-21",
+      "positive": 0.038,
+      "neutral": 0.82,
+      "negative": 0.142,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-30",
+      "positive": 0.046,
+      "neutral": 0.932,
+      "negative": 0.022,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.127,
+  "total_posts_analyzed": 24,
+  "analysis_date": "2025-08-21 17:01:13",
+  "top_keywords": null,
+  "confidence_score": null
+}

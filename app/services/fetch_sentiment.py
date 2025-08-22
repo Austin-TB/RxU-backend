@@ -14,7 +14,10 @@ class SentimentService:
         """Get the file path for a drug's sentiment data"""
         # Normalize drug name to lowercase for file matching
         normalized_name = drug_name.lower().strip()
-        return os.path.join(self.data_dir, f"{normalized_name}.json")
+        # if os.path.exists(os.path.join(self.data_dir, f"{normalized_name.replace(' ', '_')}.json")):
+        #     return os.path.join(self.data_dir, f"{normalized_name.replace(' ', '_')}.json")
+        # else:
+        return f"data/agg/daily/{normalized_name}.json"
     
     def read_sentiment_data(self, file_path: str) -> Optional[Dict]:
         """Read sentiment data from JSON file"""

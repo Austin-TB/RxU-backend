@@ -1,0 +1,172 @@
+{
+  "drug_name": "lysine",
+  "sentiment_data": [
+    {
+      "date": "2025-07-23",
+      "positive": 0.043,
+      "neutral": 0.9,
+      "negative": 0.057,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-25",
+      "positive": 0.365,
+      "neutral": 0.508,
+      "negative": 0.127,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-26",
+      "positive": 0.012,
+      "neutral": 0.264,
+      "negative": 0.724,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-27",
+      "positive": 0.327,
+      "neutral": 0.532,
+      "negative": 0.141,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-28",
+      "positive": 0.663,
+      "neutral": 0.328,
+      "negative": 0.009,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-29",
+      "positive": 0.189,
+      "neutral": 0.563,
+      "negative": 0.247,
+      "post_count": 3
+    },
+    {
+      "date": "2025-07-30",
+      "positive": 0.458,
+      "neutral": 0.452,
+      "negative": 0.089,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-31",
+      "positive": 0.091,
+      "neutral": 0.485,
+      "negative": 0.424,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-02",
+      "positive": 0.063,
+      "neutral": 0.718,
+      "negative": 0.219,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-03",
+      "positive": 0.303,
+      "neutral": 0.403,
+      "negative": 0.294,
+      "post_count": 5
+    },
+    {
+      "date": "2025-08-05",
+      "positive": 0.181,
+      "neutral": 0.626,
+      "negative": 0.193,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-06",
+      "positive": 0.142,
+      "neutral": 0.798,
+      "negative": 0.06,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-09",
+      "positive": 0.285,
+      "neutral": 0.353,
+      "negative": 0.362,
+      "post_count": 4
+    },
+    {
+      "date": "2025-08-10",
+      "positive": 0.032,
+      "neutral": 0.588,
+      "negative": 0.381,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-11",
+      "positive": 0.262,
+      "neutral": 0.24,
+      "negative": 0.498,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-12",
+      "positive": 0.301,
+      "neutral": 0.647,
+      "negative": 0.052,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-13",
+      "positive": 0.602,
+      "neutral": 0.289,
+      "negative": 0.109,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-16",
+      "positive": 0.118,
+      "neutral": 0.607,
+      "negative": 0.275,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-17",
+      "positive": 0.068,
+      "neutral": 0.712,
+      "negative": 0.221,
+      "post_count": 4
+    },
+    {
+      "date": "2025-08-18",
+      "positive": 0.091,
+      "neutral": 0.549,
+      "negative": 0.36,
+      "post_count": 9
+    },
+    {
+      "date": "2025-08-19",
+      "positive": 0.025,
+      "neutral": 0.323,
+      "negative": 0.653,
+      "post_count": 6
+    },
+    {
+      "date": "2025-08-20",
+      "positive": 0.029,
+      "neutral": 0.337,
+      "negative": 0.634,
+      "post_count": 8
+    },
+    {
+      "date": "2025-08-21",
+      "positive": 0.123,
+      "neutral": 0.591,
+      "negative": 0.286,
+      "post_count": 5
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.169,
+  "total_posts_analyzed": 70,
+  "analysis_date": "2025-08-21 16:48:39",
+  "top_keywords": null,
+  "confidence_score": null
+}
