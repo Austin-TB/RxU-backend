@@ -5,3 +5,6 @@ data/cookies.json
 app/services/twitter_scraper/cookies.json
 app/services/twitter_scraper/tweets.json
 myenv/
+.DS_Store
+app/services/.env
+data/drugss.csv

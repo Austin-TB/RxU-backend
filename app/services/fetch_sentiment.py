@@ -1,14 +1,18 @@
 import json
 import os
 import boto3
+from botocore.exceptions import ClientError, NoCredentialsError, PartialCredentialsError
 from typing import Optional, Dict
-from fastapi import HTTPException
 
-AWS_ACCESS_KEY = ""
-AWS_SECRET_KEY = ""
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
+AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
+AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 AWS_S3_BUCKET_NAME = "rxu-bucket"
 AWS_REGION = "ap-south-1"
-S3_PREFIX = "agg/"  # S3 folder prefix
+S3_PREFIX = "agg/"
 
 
 class SentimentService:
@@ -18,6 +22,10 @@ class SentimentService:
         app_dir = os.path.dirname(os.path.abspath(__file__))
         self.folder_path = os.path.join(app_dir, "cache")
         os.makedirs(self.folder_path, exist_ok=True)  # make sure cache exists
+        
+        # Initialize S3 client once and reuse
+        self._s3_client = None
+        self._validate_aws_config()
 
     def get_sentiment_file_path(self, drug_name: str) -> Optional[str]:
         """Get the file path for a drug's sentiment data and fetch if needed"""
@@ -29,24 +37,55 @@ class SentimentService:
             return json_path    
         else:
             return self.fetch_file(json_path, drug_name)
+    
+    def _validate_aws_config(self) -> None:
+        """Validate AWS configuration"""
+        if not AWS_ACCESS_KEY or not AWS_SECRET_KEY:
+            print("⚠️  Warning: AWS credentials not found in environment variables")
+            print("   S3 functionality will be disabled. Only cached files will be available.")
+    
+    @property
+    def s3_client(self):
+        """Lazy initialization of S3 client"""
+        if self._s3_client is None:
+            if not AWS_ACCESS_KEY or not AWS_SECRET_KEY:
+                return None
+            
+            try:
+                self._s3_client = boto3.client(
+                    service_name="s3",
+                    region_name=AWS_REGION,
+                    aws_access_key_id=AWS_ACCESS_KEY,
+                    aws_secret_access_key=AWS_SECRET_KEY,
+                )
+            except (NoCredentialsError, PartialCredentialsError) as e:
+                print(f"❌ AWS credentials error: {e}")
+                return None
+        return self._s3_client
 
     def fetch_file(self, json_path: str, drug_name: str) -> Optional[str]:
         """Fetch file from S3 and save locally"""
+        # Check if S3 client is available
+        if self.s3_client is None:
+            print(f"❌ S3 client not available. Cannot fetch {drug_name}")
+            return None
+            
         try:
             # Create dynamic S3 key based on drug name
             normalized_name = drug_name.lower().strip()
             s3_key = f"{S3_PREFIX}{normalized_name}.json"
             
-            s3_client = boto3.client(
-                service_name="s3",
-                region_name=AWS_REGION,
-                aws_access_key_id=AWS_ACCESS_KEY,
-                aws_secret_access_key=AWS_SECRET_KEY,
-            )
-
-            response = s3_client.get_object(Bucket=AWS_S3_BUCKET_NAME, Key=s3_key)
+            print(f"🔄 Fetching from S3: s3://{AWS_S3_BUCKET_NAME}/{s3_key}")
+            
+            response = self.s3_client.get_object(Bucket=AWS_S3_BUCKET_NAME, Key=s3_key)
             content = response["Body"].read().decode("utf-8")
-            data = json.loads(content)
+            
+            # Validate JSON before saving
+            try:
+                data = json.loads(content)
+            except json.JSONDecodeError as e:
+                print(f"❌ Invalid JSON format in S3 file {s3_key}: {e}")
+                return None
 
             # Save JSON locally
             with open(json_path, "w", encoding="utf-8") as f:
@@ -55,8 +94,19 @@ class SentimentService:
             print(f"✅ Fetched JSON from s3://{AWS_S3_BUCKET_NAME}/{s3_key}")
             return json_path
 
+        except ClientError as e:
+            error_code = e.response['Error']['Code']
+            if error_code == 'NoSuchKey':
+                print(f"❌ File not found in S3: s3://{AWS_S3_BUCKET_NAME}/{s3_key}")
+            elif error_code == 'NoSuchBucket':
+                print(f"❌ S3 bucket not found: {AWS_S3_BUCKET_NAME}")
+            elif error_code == 'AccessDenied':
+                print(f"❌ Access denied to S3: s3://{AWS_S3_BUCKET_NAME}/{s3_key}")
+            else:
+                print(f"❌ S3 error ({error_code}): {e}")
+            return None
         except Exception as e:
-            print(f"❌ Error fetching file s3://{AWS_S3_BUCKET_NAME}/{s3_key}: {e}")
+            print(f"❌ Unexpected error fetching file s3://{AWS_S3_BUCKET_NAME}/{s3_key}: {e}")
             return None
     
     def read_sentiment_data(self, file_path: str) -> Optional[Dict]:
@@ -114,6 +164,8 @@ class SentimentService:
             "sentiment_score": 0.0,
             "total_posts_analyzed": 0,
             "analysis_date": None,
+            "top_keywords": None,
+            "confidence_score": None,
             "data_available": False,
             "message": f"No sentiment data available for '{drug_name}'"
         }
@@ -185,37 +237,32 @@ def get_available_drugs() -> Dict:
 
 
 if __name__ == "__main__":
-    # Create service instance
+    """Test script for sentiment service"""
     service = SentimentService()
-    
-    # Test with ALL the drugs you have in S3
     test_drugs = ["aspirin", "adalimumab", "biotin"]
     
     print("="*60)
-    print("TESTING ALL DRUGS FROM S3")
+    print("TESTING SENTIMENT SERVICE")
     print("="*60)
     
     for drug_name in test_drugs:
-        print(f"\n--- Fetching sentiment data for '{drug_name}' ---")
+        print(f"\n--- Testing '{drug_name}' ---")
         sentiment_data = service.fetch_drug_sentiment(drug_name)
         
-        if sentiment_data.get('data_available', False):
-            print(f"✅ SUCCESS for {drug_name}")
-            print(f"   - Overall sentiment: {sentiment_data.get('overall_sentiment', 'N/A')}")
-            print(f"   - Sentiment score: {sentiment_data.get('sentiment_score', 'N/A')}")
-            print(f"   - Total posts: {sentiment_data.get('total_posts_analyzed', 'N/A')}")
+        if sentiment_data.get('data_available', True):  # Default to True since successful data won't have this field
+            print(f"✅ SUCCESS for {sentiment_data.get('drug_name', drug_name)}")
+            print(f"   📊 Overall sentiment: {sentiment_data.get('overall_sentiment', 'N/A')}")
+            print(f"   📈 Sentiment score: {sentiment_data.get('sentiment_score', 'N/A')}")
+            print(f"   📝 Total posts analyzed: {sentiment_data.get('total_posts_analyzed', 'N/A')}")
+            print(f"   📅 Analysis date: {sentiment_data.get('analysis_date', 'N/A')}")
+            
+            # Show sentiment data summary
+            sentiment_points = sentiment_data.get('sentiment_data', [])
+            if sentiment_points:
+                print(f"   📋 Sentiment data points: {len(sentiment_points)} days")
+                total_posts = sum(point.get('post_count', 0) for point in sentiment_points)
+                print(f"   📊 Total posts in timeline: {total_posts}")
         else:
-            print(f"❌ FAILED for {drug_name}")
-            print(f"   - Message: {sentiment_data.get('message', 'N/A')}")
+            print(f"❌ FAILED: {sentiment_data.get('message', 'N/A')}")
     
-    # Test listing all available drugs in cache
-    print(f"\n--- Available drugs in cache ---")
-    available_drugs = service.list_available_drugs()
-    print(f"Cached drugs: {available_drugs}")
-    print(f"Total cached: {len(available_drugs)}")
-    
-    # Test individual drug (change this to test specific ones)
-    single_test_drug = "adalimumab"  # Change this to test different drugs
-    print(f"\n--- Single test for '{single_test_drug}' ---")
-    file_path = service.get_sentiment_file_path(single_test_drug)
-    print(f"File path: {file_path}")
+    print(f"\n--- Cached drugs: {service.list_available_drugs()} ---")
