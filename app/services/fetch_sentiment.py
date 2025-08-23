@@ -4,8 +4,8 @@ import boto3
 from typing import Optional, Dict
 from fastapi import HTTPException
 
-AWS_ACCESS_KEY = "AKIATLIHLWTMONL4MO4Q"
-AWS_SECRET_KEY = "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"
+AWS_ACCESS_KEY = ""
+AWS_SECRET_KEY = ""
 AWS_S3_BUCKET_NAME = "rxu-bucket"
 AWS_REGION = "ap-south-1"
 S3_PREFIX = "agg/"  # S3 folder prefix
