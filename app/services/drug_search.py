@@ -29,10 +29,14 @@ class DrugSearchService:
                 'Synonyms': 'synonyms',
                 'Generic name': 'generic_name',
                 'Drug class': 'drug_class',
-                'Description': 'description'
+                'Description': 'description',
+                'Alternatives': 'alternatives',
+                'side-effects': 'side_effects'
             }, inplace=True)
 
             self.df['synonyms'] = self.df['synonyms'].fillna('')
+            self.df['alternatives'] = self.df['alternatives'].fillna('')
+            self.df['side_effects'] = self.df['side_effects'].fillna('')
 
             print(f"Loaded {len(self.df)} drugs from the dataset into a DataFrame.")
 

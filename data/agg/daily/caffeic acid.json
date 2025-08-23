@@ -1,0 +1,25 @@
+{
+  "drug_name": "caffeic acid",
+  "sentiment_data": [
+    {
+      "date": "2024-11-01",
+      "positive": 0.018,
+      "neutral": 0.498,
+      "negative": 0.484,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-30",
+      "positive": 0.594,
+      "neutral": 0.393,
+      "negative": 0.012,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 0.058,
+  "total_posts_analyzed": 2,
+  "analysis_date": "2025-08-21 16:55:44",
+  "top_keywords": null,
+  "confidence_score": null
+}

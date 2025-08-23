@@ -1,0 +1,242 @@
+{
+  "drug_name": "l-threonine",
+  "sentiment_data": [
+    {
+      "date": "2024-08-23",
+      "positive": 0.066,
+      "neutral": 0.893,
+      "negative": 0.041,
+      "post_count": 1
+    },
+    {
+      "date": "2024-08-26",
+      "positive": 0.144,
+      "neutral": 0.762,
+      "negative": 0.095,
+      "post_count": 1
+    },
+    {
+      "date": "2024-09-18",
+      "positive": 0.048,
+      "neutral": 0.819,
+      "negative": 0.133,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-12",
+      "positive": 0.027,
+      "neutral": 0.627,
+      "negative": 0.347,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-18",
+      "positive": 0.086,
+      "neutral": 0.897,
+      "negative": 0.017,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-26",
+      "positive": 0.054,
+      "neutral": 0.901,
+      "negative": 0.045,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-08",
+      "positive": 0.098,
+      "neutral": 0.724,
+      "negative": 0.177,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-16",
+      "positive": 0.056,
+      "neutral": 0.651,
+      "negative": 0.293,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-05",
+      "positive": 0.018,
+      "neutral": 0.389,
+      "negative": 0.593,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-16",
+      "positive": 0.291,
+      "neutral": 0.683,
+      "negative": 0.026,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-17",
+      "positive": 0.134,
+      "neutral": 0.533,
+      "negative": 0.333,
+      "post_count": 2
+    },
+    {
+      "date": "2025-01-24",
+      "positive": 0.324,
+      "neutral": 0.657,
+      "negative": 0.019,
+      "post_count": 2
+    },
+    {
+      "date": "2025-02-04",
+      "positive": 0.066,
+      "neutral": 0.898,
+      "negative": 0.037,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-05",
+      "positive": 0.837,
+      "neutral": 0.157,
+      "negative": 0.006,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-12",
+      "positive": 0.03,
+      "neutral": 0.567,
+      "negative": 0.404,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-22",
+      "positive": 0.044,
+      "neutral": 0.916,
+      "negative": 0.04,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-14",
+      "positive": 0.942,
+      "neutral": 0.055,
+      "negative": 0.003,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-26",
+      "positive": 0.046,
+      "neutral": 0.634,
+      "negative": 0.319,
+      "post_count": 2
+    },
+    {
+      "date": "2025-04-24",
+      "positive": 0.192,
+      "neutral": 0.787,
+      "negative": 0.021,
+      "post_count": 2
+    },
+    {
+      "date": "2025-04-30",
+      "positive": 0.04,
+      "neutral": 0.941,
+      "negative": 0.019,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-01",
+      "positive": 0.26,
+      "neutral": 0.673,
+      "negative": 0.068,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-08",
+      "positive": 0.181,
+      "neutral": 0.762,
+      "negative": 0.056,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-12",
+      "positive": 0.027,
+      "neutral": 0.554,
+      "negative": 0.419,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-16",
+      "positive": 0.178,
+      "neutral": 0.695,
+      "negative": 0.127,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-17",
+      "positive": 0.026,
+      "neutral": 0.828,
+      "negative": 0.146,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-18",
+      "positive": 0.115,
+      "neutral": 0.873,
+      "negative": 0.013,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-28",
+      "positive": 0.09,
+      "neutral": 0.768,
+      "negative": 0.142,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-23",
+      "positive": 0.043,
+      "neutral": 0.9,
+      "negative": 0.057,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-25",
+      "positive": 0.372,
+      "neutral": 0.527,
+      "negative": 0.101,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-26",
+      "positive": 0.113,
+      "neutral": 0.859,
+      "negative": 0.028,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-31",
+      "positive": 0.713,
+      "neutral": 0.276,
+      "negative": 0.011,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-11",
+      "positive": 0.757,
+      "neutral": 0.236,
+      "negative": 0.007,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-17",
+      "positive": 0.058,
+      "neutral": 0.795,
+      "negative": 0.147,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 0.059,
+  "total_posts_analyzed": 37,
+  "analysis_date": "2025-08-21 17:00:24",
+  "top_keywords": null,
+  "confidence_score": null
+}

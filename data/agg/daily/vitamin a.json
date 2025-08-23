@@ -1,0 +1,200 @@
+{
+  "drug_name": "vitamin a",
+  "sentiment_data": [
+    {
+      "date": "2025-07-22",
+      "positive": 0.014,
+      "neutral": 0.327,
+      "negative": 0.659,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-24",
+      "positive": 0.027,
+      "neutral": 0.446,
+      "negative": 0.528,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-26",
+      "positive": 0.065,
+      "neutral": 0.468,
+      "negative": 0.467,
+      "post_count": 5
+    },
+    {
+      "date": "2025-07-27",
+      "positive": 0.049,
+      "neutral": 0.408,
+      "negative": 0.543,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-28",
+      "positive": 0.277,
+      "neutral": 0.666,
+      "negative": 0.057,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-29",
+      "positive": 0.032,
+      "neutral": 0.399,
+      "negative": 0.569,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-30",
+      "positive": 0.025,
+      "neutral": 0.433,
+      "negative": 0.542,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-31",
+      "positive": 0.295,
+      "neutral": 0.301,
+      "negative": 0.404,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-01",
+      "positive": 0.143,
+      "neutral": 0.543,
+      "negative": 0.315,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-02",
+      "positive": 0.024,
+      "neutral": 0.266,
+      "negative": 0.71,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-03",
+      "positive": 0.022,
+      "neutral": 0.332,
+      "negative": 0.646,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-04",
+      "positive": 0.025,
+      "neutral": 0.384,
+      "negative": 0.591,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-06",
+      "positive": 0.011,
+      "neutral": 0.137,
+      "negative": 0.852,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-07",
+      "positive": 0.34,
+      "neutral": 0.438,
+      "negative": 0.222,
+      "post_count": 4
+    },
+    {
+      "date": "2025-08-08",
+      "positive": 0.14,
+      "neutral": 0.481,
+      "negative": 0.379,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-09",
+      "positive": 0.521,
+      "neutral": 0.451,
+      "negative": 0.028,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-10",
+      "positive": 0.126,
+      "neutral": 0.528,
+      "negative": 0.346,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-11",
+      "positive": 0.406,
+      "neutral": 0.412,
+      "negative": 0.182,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-12",
+      "positive": 0.889,
+      "neutral": 0.095,
+      "negative": 0.016,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-13",
+      "positive": 0.109,
+      "neutral": 0.39,
+      "negative": 0.501,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-15",
+      "positive": 0.357,
+      "neutral": 0.465,
+      "negative": 0.177,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-16",
+      "positive": 0.079,
+      "neutral": 0.596,
+      "negative": 0.326,
+      "post_count": 5
+    },
+    {
+      "date": "2025-08-17",
+      "positive": 0.039,
+      "neutral": 0.249,
+      "negative": 0.713,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-18",
+      "positive": 0.059,
+      "neutral": 0.734,
+      "negative": 0.207,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-19",
+      "positive": 0.024,
+      "neutral": 0.215,
+      "negative": 0.761,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-20",
+      "positive": 0.227,
+      "neutral": 0.531,
+      "negative": 0.242,
+      "post_count": 21
+    },
+    {
+      "date": "2025-08-21",
+      "positive": 0.211,
+      "neutral": 0.41,
+      "negative": 0.379,
+      "post_count": 11
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.166,
+  "total_posts_analyzed": 83,
+  "analysis_date": "2025-08-21 17:02:00",
+  "top_keywords": null,
+  "confidence_score": null
+}

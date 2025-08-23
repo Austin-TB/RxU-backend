@@ -1,0 +1,39 @@
+{
+  "drug_name": "calcidiol",
+  "sentiment_data": [
+    {
+      "date": "2025-01-14",
+      "positive": 0.036,
+      "neutral": 0.415,
+      "negative": 0.549,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-04",
+      "positive": 0.052,
+      "neutral": 0.388,
+      "negative": 0.56,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-16",
+      "positive": 0.046,
+      "neutral": 0.667,
+      "negative": 0.286,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-22",
+      "positive": 0.014,
+      "neutral": 0.327,
+      "negative": 0.659,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.477,
+  "total_posts_analyzed": 4,
+  "analysis_date": "2025-08-21 16:57:46",
+  "top_keywords": null,
+  "confidence_score": null
+}

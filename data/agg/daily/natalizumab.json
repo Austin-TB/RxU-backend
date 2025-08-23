@@ -1,0 +1,214 @@
+{
+  "drug_name": "natalizumab",
+  "sentiment_data": [
+    {
+      "date": "2024-09-30",
+      "positive": 0.043,
+      "neutral": 0.808,
+      "negative": 0.15,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-06",
+      "positive": 0.022,
+      "neutral": 0.359,
+      "negative": 0.619,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-18",
+      "positive": 0.041,
+      "neutral": 0.581,
+      "negative": 0.378,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-11",
+      "positive": 0.299,
+      "neutral": 0.637,
+      "negative": 0.064,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-26",
+      "positive": 0.076,
+      "neutral": 0.71,
+      "negative": 0.213,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-28",
+      "positive": 0.706,
+      "neutral": 0.279,
+      "negative": 0.015,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-29",
+      "positive": 0.04,
+      "neutral": 0.415,
+      "negative": 0.545,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-06",
+      "positive": 0.048,
+      "neutral": 0.845,
+      "negative": 0.107,
+      "post_count": 2
+    },
+    {
+      "date": "2024-12-11",
+      "positive": 0.05,
+      "neutral": 0.315,
+      "negative": 0.634,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-19",
+      "positive": 0.119,
+      "neutral": 0.834,
+      "negative": 0.047,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-25",
+      "positive": 0.235,
+      "neutral": 0.453,
+      "negative": 0.313,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-30",
+      "positive": 0.091,
+      "neutral": 0.858,
+      "negative": 0.05,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-31",
+      "positive": 0.091,
+      "neutral": 0.797,
+      "negative": 0.111,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-13",
+      "positive": 0.246,
+      "neutral": 0.631,
+      "negative": 0.123,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-17",
+      "positive": 0.091,
+      "neutral": 0.858,
+      "negative": 0.05,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-21",
+      "positive": 0.084,
+      "neutral": 0.8,
+      "negative": 0.117,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-17",
+      "positive": 0.055,
+      "neutral": 0.305,
+      "negative": 0.639,
+      "post_count": 2
+    },
+    {
+      "date": "2025-05-26",
+      "positive": 0.071,
+      "neutral": 0.894,
+      "negative": 0.035,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-13",
+      "positive": 0.108,
+      "neutral": 0.848,
+      "negative": 0.043,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-23",
+      "positive": 0.008,
+      "neutral": 0.129,
+      "negative": 0.864,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-30",
+      "positive": 0.018,
+      "neutral": 0.382,
+      "negative": 0.6,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-05",
+      "positive": 0.056,
+      "neutral": 0.688,
+      "negative": 0.256,
+      "post_count": 3
+    },
+    {
+      "date": "2025-07-09",
+      "positive": 0.048,
+      "neutral": 0.909,
+      "negative": 0.043,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-30",
+      "positive": 0.039,
+      "neutral": 0.649,
+      "negative": 0.312,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-31",
+      "positive": 0.269,
+      "neutral": 0.691,
+      "negative": 0.04,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-06",
+      "positive": 0.031,
+      "neutral": 0.731,
+      "negative": 0.238,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-07",
+      "positive": 0.098,
+      "neutral": 0.847,
+      "negative": 0.055,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-16",
+      "positive": 0.025,
+      "neutral": 0.427,
+      "negative": 0.548,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-20",
+      "positive": 0.195,
+      "neutral": 0.456,
+      "negative": 0.35,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.156,
+  "total_posts_analyzed": 34,
+  "analysis_date": "2025-08-21 16:49:51",
+  "top_keywords": null,
+  "confidence_score": null
+}

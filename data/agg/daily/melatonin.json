@@ -1,0 +1,179 @@
+{
+  "drug_name": "melatonin",
+  "sentiment_data": [
+    {
+      "date": "2025-07-21",
+      "positive": 0.07,
+      "neutral": 0.435,
+      "negative": 0.495,
+      "post_count": 3
+    },
+    {
+      "date": "2025-07-23",
+      "positive": 0.48,
+      "neutral": 0.197,
+      "negative": 0.323,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-24",
+      "positive": 0.163,
+      "neutral": 0.612,
+      "negative": 0.225,
+      "post_count": 3
+    },
+    {
+      "date": "2025-07-27",
+      "positive": 0.077,
+      "neutral": 0.365,
+      "negative": 0.558,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-28",
+      "positive": 0.703,
+      "neutral": 0.283,
+      "negative": 0.014,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-29",
+      "positive": 0.085,
+      "neutral": 0.525,
+      "negative": 0.39,
+      "post_count": 3
+    },
+    {
+      "date": "2025-07-31",
+      "positive": 0.28,
+      "neutral": 0.361,
+      "negative": 0.36,
+      "post_count": 5
+    },
+    {
+      "date": "2025-08-01",
+      "positive": 0.509,
+      "neutral": 0.418,
+      "negative": 0.073,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-02",
+      "positive": 0.389,
+      "neutral": 0.237,
+      "negative": 0.374,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-03",
+      "positive": 0.181,
+      "neutral": 0.706,
+      "negative": 0.113,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-04",
+      "positive": 0.079,
+      "neutral": 0.455,
+      "negative": 0.466,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-06",
+      "positive": 0.742,
+      "neutral": 0.241,
+      "negative": 0.017,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-07",
+      "positive": 0.179,
+      "neutral": 0.626,
+      "negative": 0.196,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-08",
+      "positive": 0.326,
+      "neutral": 0.298,
+      "negative": 0.376,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-09",
+      "positive": 0.029,
+      "neutral": 0.339,
+      "negative": 0.632,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-10",
+      "positive": 0.036,
+      "neutral": 0.219,
+      "negative": 0.745,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-11",
+      "positive": 0.053,
+      "neutral": 0.413,
+      "negative": 0.533,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-13",
+      "positive": 0.277,
+      "neutral": 0.324,
+      "negative": 0.399,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-14",
+      "positive": 0.018,
+      "neutral": 0.191,
+      "negative": 0.791,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-15",
+      "positive": 0.036,
+      "neutral": 0.655,
+      "negative": 0.308,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-17",
+      "positive": 0.066,
+      "neutral": 0.513,
+      "negative": 0.422,
+      "post_count": 6
+    },
+    {
+      "date": "2025-08-18",
+      "positive": 0.15,
+      "neutral": 0.407,
+      "negative": 0.443,
+      "post_count": 8
+    },
+    {
+      "date": "2025-08-20",
+      "positive": 0.251,
+      "neutral": 0.488,
+      "negative": 0.261,
+      "post_count": 5
+    },
+    {
+      "date": "2025-08-21",
+      "positive": 0.157,
+      "neutral": 0.337,
+      "negative": 0.506,
+      "post_count": 25
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.228,
+  "total_posts_analyzed": 87,
+  "analysis_date": "2025-08-21 16:59:52",
+  "top_keywords": null,
+  "confidence_score": null
+}

@@ -1,0 +1,32 @@
+{
+  "drug_name": "adenosine monophosphate",
+  "sentiment_data": [
+    {
+      "date": "2025-03-02",
+      "positive": 0.135,
+      "neutral": 0.816,
+      "negative": 0.049,
+      "post_count": 2
+    },
+    {
+      "date": "2025-05-18",
+      "positive": 0.735,
+      "neutral": 0.259,
+      "negative": 0.006,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-04",
+      "positive": 0.026,
+      "neutral": 0.931,
+      "negative": 0.044,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "positive",
+  "sentiment_score": 0.221,
+  "total_posts_analyzed": 4,
+  "analysis_date": "2025-08-21 16:53:47",
+  "top_keywords": null,
+  "confidence_score": null
+}

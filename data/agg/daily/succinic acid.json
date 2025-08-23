@@ -1,0 +1,60 @@
+{
+  "drug_name": "succinic acid",
+  "sentiment_data": [
+    {
+      "date": "2024-08-24",
+      "positive": 0.077,
+      "neutral": 0.866,
+      "negative": 0.057,
+      "post_count": 1
+    },
+    {
+      "date": "2024-09-15",
+      "positive": 0.177,
+      "neutral": 0.51,
+      "negative": 0.313,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-26",
+      "positive": 0.056,
+      "neutral": 0.831,
+      "negative": 0.114,
+      "post_count": 1
+    },
+    {
+      "date": "2025-01-27",
+      "positive": 0.056,
+      "neutral": 0.831,
+      "negative": 0.114,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-07",
+      "positive": 0.073,
+      "neutral": 0.895,
+      "negative": 0.032,
+      "post_count": 1
+    },
+    {
+      "date": "2025-05-27",
+      "positive": 0.162,
+      "neutral": 0.74,
+      "negative": 0.098,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-15",
+      "positive": 0.011,
+      "neutral": 0.231,
+      "negative": 0.757,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.125,
+  "total_posts_analyzed": 7,
+  "analysis_date": "2025-08-21 16:55:56",
+  "top_keywords": null,
+  "confidence_score": null
+}

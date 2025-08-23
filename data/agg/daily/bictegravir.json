@@ -1,0 +1,60 @@
+{
+  "drug_name": "bictegravir",
+  "sentiment_data": [
+    {
+      "date": "2024-12-25",
+      "positive": 0.094,
+      "neutral": 0.244,
+      "negative": 0.662,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-26",
+      "positive": 0.084,
+      "neutral": 0.75,
+      "negative": 0.166,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-28",
+      "positive": 0.204,
+      "neutral": 0.657,
+      "negative": 0.14,
+      "post_count": 2
+    },
+    {
+      "date": "2025-06-22",
+      "positive": 0.273,
+      "neutral": 0.715,
+      "negative": 0.012,
+      "post_count": 1
+    },
+    {
+      "date": "2025-06-25",
+      "positive": 0.382,
+      "neutral": 0.611,
+      "negative": 0.007,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-20",
+      "positive": 0.031,
+      "neutral": 0.474,
+      "negative": 0.496,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-24",
+      "positive": 0.12,
+      "neutral": 0.813,
+      "negative": 0.068,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.037,
+  "total_posts_analyzed": 8,
+  "analysis_date": "2025-08-21 17:07:08",
+  "top_keywords": null,
+  "confidence_score": null
+}

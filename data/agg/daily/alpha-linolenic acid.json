@@ -1,0 +1,74 @@
+{
+  "drug_name": "alpha-linolenic acid",
+  "sentiment_data": [
+    {
+      "date": "2024-09-24",
+      "positive": 0.013,
+      "neutral": 0.458,
+      "negative": 0.53,
+      "post_count": 1
+    },
+    {
+      "date": "2024-10-27",
+      "positive": 0.013,
+      "neutral": 0.429,
+      "negative": 0.558,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-02",
+      "positive": 0.03,
+      "neutral": 0.774,
+      "negative": 0.196,
+      "post_count": 1
+    },
+    {
+      "date": "2024-11-28",
+      "positive": 0.053,
+      "neutral": 0.9,
+      "negative": 0.047,
+      "post_count": 1
+    },
+    {
+      "date": "2024-12-16",
+      "positive": 0.21,
+      "neutral": 0.763,
+      "negative": 0.027,
+      "post_count": 1
+    },
+    {
+      "date": "2025-02-13",
+      "positive": 0.293,
+      "neutral": 0.685,
+      "negative": 0.023,
+      "post_count": 1
+    },
+    {
+      "date": "2025-03-15",
+      "positive": 0.041,
+      "neutral": 0.84,
+      "negative": 0.119,
+      "post_count": 1
+    },
+    {
+      "date": "2025-04-10",
+      "positive": 0.041,
+      "neutral": 0.84,
+      "negative": 0.119,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-20",
+      "positive": 0.079,
+      "neutral": 0.872,
+      "negative": 0.048,
+      "post_count": 1
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.099,
+  "total_posts_analyzed": 9,
+  "analysis_date": "2025-08-21 16:53:59",
+  "top_keywords": null,
+  "confidence_score": null
+}

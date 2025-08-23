@@ -1,0 +1,179 @@
+{
+  "drug_name": "gabapentin",
+  "sentiment_data": [
+    {
+      "date": "2025-07-21",
+      "positive": 0.252,
+      "neutral": 0.39,
+      "negative": 0.358,
+      "post_count": 2
+    },
+    {
+      "date": "2025-07-22",
+      "positive": 0.03,
+      "neutral": 0.465,
+      "negative": 0.505,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-23",
+      "positive": 0.072,
+      "neutral": 0.617,
+      "negative": 0.311,
+      "post_count": 3
+    },
+    {
+      "date": "2025-07-24",
+      "positive": 0.403,
+      "neutral": 0.584,
+      "negative": 0.013,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-27",
+      "positive": 0.014,
+      "neutral": 0.147,
+      "negative": 0.838,
+      "post_count": 3
+    },
+    {
+      "date": "2025-07-29",
+      "positive": 0.026,
+      "neutral": 0.535,
+      "negative": 0.439,
+      "post_count": 1
+    },
+    {
+      "date": "2025-07-30",
+      "positive": 0.061,
+      "neutral": 0.473,
+      "negative": 0.466,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-03",
+      "positive": 0.047,
+      "neutral": 0.38,
+      "negative": 0.573,
+      "post_count": 4
+    },
+    {
+      "date": "2025-08-04",
+      "positive": 0.417,
+      "neutral": 0.239,
+      "negative": 0.345,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-05",
+      "positive": 0.077,
+      "neutral": 0.358,
+      "negative": 0.565,
+      "post_count": 5
+    },
+    {
+      "date": "2025-08-06",
+      "positive": 0.082,
+      "neutral": 0.601,
+      "negative": 0.316,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-07",
+      "positive": 0.021,
+      "neutral": 0.266,
+      "negative": 0.713,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-10",
+      "positive": 0.045,
+      "neutral": 0.232,
+      "negative": 0.723,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-11",
+      "positive": 0.533,
+      "neutral": 0.2,
+      "negative": 0.267,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-12",
+      "positive": 0.411,
+      "neutral": 0.378,
+      "negative": 0.21,
+      "post_count": 4
+    },
+    {
+      "date": "2025-08-13",
+      "positive": 0.025,
+      "neutral": 0.613,
+      "negative": 0.362,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-14",
+      "positive": 0.293,
+      "neutral": 0.353,
+      "negative": 0.354,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-15",
+      "positive": 0.018,
+      "neutral": 0.229,
+      "negative": 0.753,
+      "post_count": 1
+    },
+    {
+      "date": "2025-08-16",
+      "positive": 0.162,
+      "neutral": 0.672,
+      "negative": 0.166,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-17",
+      "positive": 0.018,
+      "neutral": 0.412,
+      "negative": 0.57,
+      "post_count": 2
+    },
+    {
+      "date": "2025-08-18",
+      "positive": 0.016,
+      "neutral": 0.266,
+      "negative": 0.718,
+      "post_count": 3
+    },
+    {
+      "date": "2025-08-19",
+      "positive": 0.259,
+      "neutral": 0.402,
+      "negative": 0.338,
+      "post_count": 5
+    },
+    {
+      "date": "2025-08-20",
+      "positive": 0.047,
+      "neutral": 0.35,
+      "negative": 0.603,
+      "post_count": 7
+    },
+    {
+      "date": "2025-08-21",
+      "positive": 0.164,
+      "neutral": 0.464,
+      "negative": 0.372,
+      "post_count": 26
+    }
+  ],
+  "overall_sentiment": "negative",
+  "sentiment_score": -0.298,
+  "total_posts_analyzed": 89,
+  "analysis_date": "2025-08-21 17:05:35",
+  "top_keywords": null,
+  "confidence_score": null
+}
