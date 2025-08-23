@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 import boto3
 from botocore.exceptions import ClientError, NoCredentialsError, PartialCredentialsError
 from typing import Optional, Dict
@@ -23,6 +24,10 @@ class SentimentService:
         self.folder_path = os.path.join(app_dir, "cache")
         os.makedirs(self.folder_path, exist_ok=True)  # make sure cache exists
         
+        # Set up local fallback directory
+        project_root = os.path.abspath(os.path.join(app_dir, "../../../"))
+        self.local_data_path = os.path.join(project_root, "backend", "data", "agg", "daily")
+        
         # Initialize S3 client once and reuse
         self._s3_client = None
         self._validate_aws_config()
@@ -42,7 +47,26 @@ class SentimentService:
         """Validate AWS configuration"""
         if not AWS_ACCESS_KEY or not AWS_SECRET_KEY:
             print("⚠️  Warning: AWS credentials not found in environment variables")
-            print("   S3 functionality will be disabled. Only cached files will be available.")
+            print("   S3 functionality will be disabled. Will use local fallback if available.")
+    
+    def _get_local_file_path(self, drug_name: str) -> Optional[str]:
+        """Get local file path for drug data"""
+        normalized_name = drug_name.lower().strip()
+        local_file_path = os.path.join(self.local_data_path, f"{normalized_name}.json")
+        
+        if os.path.exists(local_file_path):
+            return local_file_path
+        return None
+    
+    def _copy_from_local_to_cache(self, local_path: str, cache_path: str) -> bool:
+        """Copy file from local storage to cache"""
+        try:
+            shutil.copy2(local_path, cache_path)
+            print(f"✅ Copied from local storage: {local_path} -> {cache_path}")
+            return True
+        except Exception as e:
+            print(f"❌ Failed to copy from local storage: {e}")
+            return False
     
     @property
     def s3_client(self):
@@ -64,12 +88,20 @@ class SentimentService:
         return self._s3_client
 
     def fetch_file(self, json_path: str, drug_name: str) -> Optional[str]:
+        """Fetch file from S3 and save locally, with local fallback"""
+        # Try S3 first if available
+        if self.s3_client is not None:
+            s3_result = self._fetch_from_s3(json_path, drug_name)
+            if s3_result:
+                return s3_result
+        else:
+            print(f"🔄 S3 not available, trying local fallback for {drug_name}")
+        
+        # Fallback to local storage
+        return self._fetch_from_local(json_path, drug_name)
+    
+    def _fetch_from_s3(self, json_path: str, drug_name: str) -> Optional[str]:
         """Fetch file from S3 and save locally"""
-        # Check if S3 client is available
-        if self.s3_client is None:
-            print(f"❌ S3 client not available. Cannot fetch {drug_name}")
-            return None
-            
         try:
             # Create dynamic S3 key based on drug name
             normalized_name = drug_name.lower().strip()
@@ -97,7 +129,7 @@ class SentimentService:
         except ClientError as e:
             error_code = e.response['Error']['Code']
             if error_code == 'NoSuchKey':
-                print(f"❌ File not found in S3: s3://{AWS_S3_BUCKET_NAME}/{s3_key}")
+                print(f"⚠️  File not found in S3: s3://{AWS_S3_BUCKET_NAME}/{s3_key}")
             elif error_code == 'NoSuchBucket':
                 print(f"❌ S3 bucket not found: {AWS_S3_BUCKET_NAME}")
             elif error_code == 'AccessDenied':
@@ -108,6 +140,24 @@ class SentimentService:
         except Exception as e:
             print(f"❌ Unexpected error fetching file s3://{AWS_S3_BUCKET_NAME}/{s3_key}: {e}")
             return None
+    
+    def _fetch_from_local(self, json_path: str, drug_name: str) -> Optional[str]:
+        """Fetch file from local storage and copy to cache"""
+        local_file_path = self._get_local_file_path(drug_name)
+        
+        if local_file_path is None:
+            print(f"❌ File not found in local storage: {drug_name}")
+            return None
+        
+        print(f"🔄 Using local fallback: {local_file_path}")
+        
+        # Copy from local storage to cache
+        if self._copy_from_local_to_cache(local_file_path, json_path):
+            return json_path
+        else:
+            # If copy fails, return the local path directly
+            print(f"⚠️  Copy failed, using local file directly: {local_file_path}")
+            return local_file_path
     
     def read_sentiment_data(self, file_path: str) -> Optional[Dict]:
         """Read sentiment data from JSON file"""
@@ -171,18 +221,25 @@ class SentimentService:
         }
     
     def list_available_drugs(self) -> list:
-        """Get list of drugs that have sentiment data available"""
+        """Get list of drugs that have sentiment data available (cache + local storage)"""
+        drugs = set()
+        
         try:
-            if not os.path.exists(self.folder_path):
-                return []
+            # Add drugs from cache
+            if os.path.exists(self.folder_path):
+                for filename in os.listdir(self.folder_path):
+                    if filename.endswith('.json'):
+                        drug_name = filename[:-5]  # Remove .json extension
+                        drugs.add(drug_name)
             
-            drugs = []
-            for filename in os.listdir(self.folder_path):
-                if filename.endswith('.json'):
-                    drug_name = filename[:-5]  # Remove .json extension
-                    drugs.append(drug_name)
+            # Add drugs from local storage
+            if os.path.exists(self.local_data_path):
+                for filename in os.listdir(self.local_data_path):
+                    if filename.endswith('.json'):
+                        drug_name = filename[:-5]  # Remove .json extension
+                        drugs.add(drug_name)
             
-            return sorted(drugs)
+            return sorted(list(drugs))
         except Exception as e:
             print(f"Error listing available drugs: {e}")
             return []
