@@ -4,3 +4,4 @@ app/services/.env
 data/drugss.csv
 data/drugsss.csv
 __pycache__/
+cache/
